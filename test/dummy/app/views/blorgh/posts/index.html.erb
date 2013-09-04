@@ -1,0 +1,8 @@
+<h1>Posts - App View</h1>
+<%= link_to "New Post", new_post_path %>
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <small>By <%= post.author %></small>
+  <%= simple_format(post.text) %>
+  <hr>
+<% end %>
